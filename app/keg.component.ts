@@ -10,6 +10,7 @@ import { Keg } from './keg.model';
       <p>Brand: {{keg.brand}}</p>
       <p>Price: \${{keg.price}}.00</p>
       <p>Alcohol Content: {{keg.alcohol}}.00%</p>
+      <p>Pints Remaining: {{keg.pints}}</p>
     </div>
 
   `

@@ -11,6 +11,7 @@ import { Keg } from './keg.model';
       <p>Price: \${{keg.price}}.00</p>
       <p>Alcohol Content: {{keg.alcohol}}%</p>
       <p>Pints Remaining: {{keg.pints}}</p>
+      <button>drink pint</button>
     </div>
 
   `

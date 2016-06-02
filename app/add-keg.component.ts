@@ -12,7 +12,7 @@ import { Keg } from './keg.model';
     <input placeholder="keg price" #newKegPrice>
     <input placeholder="keg alcohol" #newKegAlcohol>
     <input placeholder="keg pints" #newKegPints>
-    <button (click)="addKeg(newKegName, newKegBrand, newKegPrice, newKegAlcohol, newKegPints)">Add Keg</button>
+    <button (click)="addKeg(newKegName, newKegBrand, newKegPrice, newKegAlcohol, newKegPints)" class="btn-success add-button">Add Keg</button>
   </div>
   `
 })

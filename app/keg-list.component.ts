@@ -17,7 +17,7 @@ import { AddKegComponent } from './add-keg.component';
     </keg-display>
     <edit-keg-details *ngIf='selectedKeg' [keg]='selectedKeg'>
     </edit-keg-details>
-    <add-keg></add-keg>
+    <add-keg (onSubmitNewKeg)="createKeg($event)"></add-keg>
   `
 })
 
@@ -31,5 +31,9 @@ export class KegListComponent{
   kegClicked(clickedKeg: Keg): void{
     this.selectedKeg = clickedKeg;
     this.onKegSelect.emit(clickedKeg);
+  }
+  createKeg(newKeg: Keg): void {
+    newKeg.id = this.kegList.length;
+    this.kegList.push(newKeg);
   }
 }

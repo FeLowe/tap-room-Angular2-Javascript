@@ -11,14 +11,14 @@ import { Keg } from './keg.model';
       <p>Price: \${{keg.price}}.00</p>
       <p>Alcohol Content: {{keg.alcohol}}%</p>
       <p>Pints Remaining: {{keg.pints}}</p>
-      <button>drink pint</button>
     </div>
-
+    <button (click)="pintSold()">Sold pint</button>
   `
 })
 
 export class KegComponent {
   public keg: Keg;
+  // public pints: number;
   public beerVisible: boolean = false;
   public displayBeer() {
     if (this.beerVisible == true) {
@@ -28,5 +28,8 @@ export class KegComponent {
       //if the beer is invisible (false) then show it, by setting beerVisible to true.
       this.beerVisible = true;
     };
+  }
+  public pintSold() {
+    this.keg.pints = this.keg.pints - 1;
   }
 }

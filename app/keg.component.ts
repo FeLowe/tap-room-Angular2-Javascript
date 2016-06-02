@@ -18,7 +18,6 @@ import { Keg } from './keg.model';
 
 export class KegComponent {
   public keg: Keg;
-  // public pints: number;
   public beerVisible: boolean = false;
   public displayBeer() {
     if (this.beerVisible == true) {
@@ -30,6 +29,7 @@ export class KegComponent {
     };
   }
   public pintSold() {
+    this.keg.open = true;
     this.keg.pints = this.keg.pints - 1;
   }
 }
